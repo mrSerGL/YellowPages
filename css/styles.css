@@ -1,0 +1,219 @@
+:root {
+  --main-cl: #212121;
+  --items: 1;
+  --indent: 20px;
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--main-cl);
+}
+
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* base styles */
+.section {
+  padding: 60px 0;
+}
+
+.container {
+  width: 800px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+/* projects section */
+
+.projects {
+  background-color: rgb(192, 245, 223);
+}
+.projects-title {
+  font-size: 1.5em;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+}
+
+.projects-list {
+  position: relative;
+  outline: 5px dashed orange;
+  /* outline-offset: 5px; */
+}
+
+.projects-list:before {
+  content: "flex-container";
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  color: orange;
+  text-transform: uppercase;
+}
+
+.projects-item {
+  position: relative;
+  height: 100px;
+
+  font-size: 20px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+
+  background-color: lightblue;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.projects-item:before {
+  content: "flex-element";
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  font-size: 14px;
+  color: red;
+}
+
+/**
+  |============================
+  | Flex box
+  |============================
+*/
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  gap: 20px;
+
+  /*   height: 400px; */
+  /*
+  ==Default properties==
+    flex-direction: row;
+    justify-content: flex-start;
+    alingn-items: stretch;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    row-gap: 40px;
+    column-gap: 20px;
+   */
+}
+
+.projects-item {
+  /*     width: 200px; */
+  flex-basis: calc((100% - 20px * 3) / 4);
+
+  /*
+  ==Default properties==
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+  */
+}
+
+.projects-item:nth-last-child(-1 + 4) {
+  margin-bottom: 0;
+}
+
+.projects-item:nth-child(3n + 1) {
+  background-color: chartreuse;
+}
+
+/* 
+.projects-item:nth-child(2) {
+  order: -1;
+  color: hotpink;
+} */
+
+/* .projects-item:nth-child(4) {
+  color: teal;
+  flex-shrink: 2;
+} */
+
+/* ===== IMAGES and BACKGROUNDS =====*/
+
+.box::before {
+  content: "Это текст в ::before";
+  font-size: 40px;
+  color: orange;
+}
+
+.box::after {
+  content: "Это текст в ::after";
+  font-size: 30px;
+  color: teal;
+}
+
+/* Применить стили к псевдоэлементу .box::before при ховере по элементу .box */
+.box:hover::before {
+  color: green;
+}
+
+/* Применить стили к псевдоэлементу .box::after при ховере по элементу .box */
+.box:hover::after {
+  color: tomato;
+}
+
+/* ================================*/
+
+.list {
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.list-link {
+  display: inline-flex;
+  align-items: center;
+  color: currentColor;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+.list-link::before,
+.list-link::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+
+/* Adds a fire icon in front of the link text */
+.list-link::before {
+  margin-right: 16px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/599/599502.png");
+}
+
+/* Adds and hides arrow icon after the link text */
+.list-link::after {
+  display: none;
+  margin-left: 16px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/507/507257.png");
+}
+
+.list-link:hover {
+  color: #2196f3;
+}
+
+/* Show arrow icon on hover */
+.list-link:hover::after {
+  display: block;
+}
+
+/* ========================================= */

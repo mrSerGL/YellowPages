@@ -1,0 +1,51 @@
+Щоб змінити колір для коментарів скористайтеся цією інструкцією:
+Відкриваємо Налаштування
+В правому верхньому куті перемикаємо вигляд файлу налаштувань (settings.json)
+Додаємо блок коду вказаний нижче :стрелка_вниз: в кінець файлу, перед закриваючою фігурною дужкою.
+Властивість foreground відповідає за колір коментарів. Зверніть увагу на підписи, вони описують значення властивостей, які можна змінити
+“editor.tokenColorCustomizations”: {
+    “textMateRules”: [
+      {
+        “scope”: [“comment”],
+        “settings”: {
+          “fontStyle”: “italic”,
+          “foreground”: “#FFFF35” // change color only for the comment text
+        }
+      }
+      // color of attributes
+      // {
+      //   “scope”: [“entity.other.attribute-name.html”],
+      //   “settings”: {
+      //     “foreground”: “#EE00FF”
+      //   }
+      // },
+      // color of class names
+      // {
+      //   “scope”: [“string.quoted.double.html”, “entity.other.attribute-name.class.css”],
+      //   “settings”: {
+      //     “foreground”: “#12E323"
+      //   }
+      // },
+      // color of start quotes
+      // {
+      //   “scope”: [“punctuation.definition.string.begin.html”],
+      //   “settings”: {
+      //     “foreground”: “#FF0000”
+      //   }
+      // },
+      // color of end quotes
+      // {
+      //   “scope”: [“punctuation.definition.string.end.html”],
+      //   “settings”: {
+      //     “foreground”: “#5E1414"
+      //   }
+      // }
+      // {
+      //   “scope”: [“punctuation.definition.comment”],
+      //   “settings”: {
+      //     “fontStyle”: “italic”,
+      //     “foreground”: “#FFFF35” // change color only for the punctuation
+      //   }
+      // }
+    ]
+  }

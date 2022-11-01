@@ -1,0 +1,16 @@
+настройки 
+configure user snipets
+выбрать html.json
+если нет тако - создать (возм произвольное название)
+вствить код
+  "Include svg tag": {
+    "prefix": "svg",
+    "body": [
+      "<svg class=\"${1}\" width=\"${2}\" height=\"${3}\">",
+      "  <use href=\"${4}\"></use>",
+      "</svg>"
+    ],
+    "description": "Add svg tag for html"
+  },
+
+ 
