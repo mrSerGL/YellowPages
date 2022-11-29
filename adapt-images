@@ -80,3 +80,6 @@ url(../images/background/bg-img_lg@2x.jpg); } }
     loading="lazy"
   />
 </picture>
+
+Посилання на репозиторій восьмого модуля (Заняття 16. Адаптивна графіка)
+https://github.com/YK911/fecore-70/tree/module-08-practice
