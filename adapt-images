@@ -1,0 +1,82 @@
+<!-- Робота із фоновими зображеннями -->
+
+background-position: center; background-size: cover; background-repeat:
+no-repeat; // mobile screen background-image:
+url(../images/background/bg-img_sm@1x.jpg); @media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi), (min-resolution: 2dppx) { background-image:
+url(../images/background/bg-img_sm@2x.jpg); } // tablet screen @media screen and
+(min-width: 481px) { background-image:
+url(../images/background/bg-img_md@1x.jpg); @media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi), (min-resolution: 2dppx) { background-image:
+url(../images/background/bg-img_md@2x.jpg); } } // desktop screen @media screen
+and (min-width: 769px) { background-image:
+url(../images/background/bg-img_lg@1x.jpg); @media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi), (min-resolution: 2dppx) { background-image:
+url(../images/background/bg-img_lg@2x.jpg); } }
+
+<!-- Робота із контентними зображеннями -->
+
+<img
+  srcset="
+    ./images/team/img-1_sm@1x.jpg 450w,
+    ./images/team/img-1_sm@2x.jpg 900w,
+    ./images/team/img-1_md@1x.jpg 354w,
+    ./images/team/img-1_md@2x.jpg 708w,
+    ./images/team/img-1_lg@1x.jpg 270w,
+    ./images/team/img-1_lg@2x.jpg 540w
+  "
+  src="./images/team/img-1_sm@1x.jpg"
+  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+  width="450"
+  height="460"
+  alt="Product Designer"
+/>
+<picture>
+  <!-- desktop -->
+  <source
+    media="(min-width: 1200px)"
+    srcset="
+      ./images/team/img-1_lg@1x.webp 1x,
+      ./images/team/img-1_lg@2x.webp 2x
+    "
+    type="image/webp"
+  />
+  <source
+    media="(min-width: 1200px)"
+    srcset="./images/team/img-1_lg@1x.jpg 1x, ./images/team/img-1_lg@2x.jpg 2x"
+  />
+  <!-- tablet -->
+  <source
+    media="(min-width: 768px)"
+    srcset="
+      ./images/team/img-1_md@1x.webp 1x,
+      ./images/team/img-1_md@2x.webp 2x
+    "
+    type="image/webp"
+  />
+  <source
+    media="(min-width: 768px)"
+    srcset="./images/team/img-1_md@1x.jpg 1x, ./images/team/img-1_md@2x.jpg 2x"
+  />
+  <!-- mobile -->
+  <source
+    media="(max-width: 767px)"
+    srcset="
+      ./images/team/img-1_sm@1x.webp 1x,
+      ./images/team/img-1_sm@2x.webp 2x
+    "
+    type="image/webp"
+  />
+  <source
+    media="(max-width: 767px)"
+    srcset="./images/team/img-1_sm@1x.jpg 1x, ./images/team/img-1_sm@2x.jpg 2x"
+  />
+  <!-- default -->
+  <img
+    class=""
+    src="./images/team/img-1_sm@1x.jpg"
+    width="450"
+    height="460"
+    loading="lazy"
+  />
+</picture>
