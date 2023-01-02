@@ -17,14 +17,27 @@
   .row,
   .row > .column {
     padding: 8px;
+
   }
   
   /* Create three equal columns that floats next to each other */
   .column {
     float: left;
-    width: 33.33%;
+    // width: 33.33%;
+    width: 100%;
     display: none; /* Hide all elements by default */
-  }
+
+  
+  @media only screen and (min-width: 768px) {
+    width: calc(100% / 2);
+  } 
+
+  @media only screen and (min-width: 1200px) {
+    width: calc(100% / 3);
+  } 
+}
+
+  
   
   /* Clear floats after rows */ 
   .row:after {

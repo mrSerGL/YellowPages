@@ -74,7 +74,7 @@
 
     <div class="clearfix"></div>
 
-   <!-- <div style="padding:6px;">
+    <!-- <div style="padding:6px;">
       <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than
         700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side
         by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
@@ -97,18 +97,19 @@
         <button class="btn" onclick="filterSelection('nature')"> Nature</button>
         <button class="btn" onclick="filterSelection('cars')"> Cars</button>
         <button class="btn" onclick="filterSelection('people')"> People</button>
+        <button class="btn" onclick="filterSelection('frezer')"> Frezer</button>
       </div>
 
       <!-- Portfolio Gallery Grid -->
       <div class="row">
-        <div class="column nature">
+        <div class="column frezer">
           <div class="content">
             <img src="./images/portfolio/mountains.jpg" alt="Mountains" style="width:100%">
             <h4>Mountains</h4>
             <p>Lorem ipsum dolor..</p>
           </div>
         </div>
-        <div class="column nature">
+        <div class="column frezer">
           <div class="content">
             <img src="./images/portfolio/lights.jpg" alt="Lights" style="width:100%">
             <h4>Lights</h4>
@@ -160,12 +161,15 @@
           </div>
         </div>
         <div class="column people">
-          <div class="content">
-            <img src="./images/portfolio/people3.jpg" alt="Car" style="width:100%">
-            <h4>Woman</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
+          <a target="_blank" href="./images/portfolio/people3.jpg">
+            <div class="content">
+              <img src="./images/portfolio/people3.jpg" alt="Car" style="width:100%">
+              <h4>Woman link</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </a>
         </div>
+
         <!-- END GRID -->
       </div>
 
@@ -177,9 +181,9 @@
 
 
 
-<!-- ==== scripts =====  -->
+  <!-- ==== scripts =====  -->
 
-<!-- === portfolio script === -->
+  <!-- === portfolio script === -->
   <script>
     filterSelection("all")
     function filterSelection(c) {
