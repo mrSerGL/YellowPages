@@ -1,0 +1,25 @@
+:root {
+  /* Fonts */
+  --main-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Text colors */
+  --main-txt: #303030;
+  --accent-txt: #ff6c00;
+ 
+
+  /* BG colors */
+  --main-bg: #191c26;
+  --accent-bg: #ff6c00;
+
+  /* Others */
+
+
+  --trns-fast: 300ms ease-in-out;
+  --trns-slow: 500ms ease-in;
+  }
+
+  // BREAKPOINTS
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;

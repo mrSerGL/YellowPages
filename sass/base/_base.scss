@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+  
+  body {
+    font-family: sans-serif;
+    
+  }
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*:focus {
+    border-color: transparent;
+    outline-color: transparent;
+}
+  
