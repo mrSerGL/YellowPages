@@ -8,14 +8,8 @@ html {
     
   }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-*:focus {
-    border-color: transparent;
-    outline-color: transparent;
-}
+  html,
+  body {
+    height: 100%;
+  }
   
