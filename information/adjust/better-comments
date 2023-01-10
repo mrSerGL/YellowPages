@@ -17,6 +17,9 @@
     "sync.gist": "56752907b56a422471e128d52fd6936f",
     "better-comments.tags": [
     
+    
+
+    
 
 
 
@@ -74,7 +77,7 @@
             "underline": false,
             "backgroundColor": "transparent",
             "bold": true,
-            "italic": false
+            "italic": true
         },
         {
             "tag": "|",
