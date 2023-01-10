@@ -7,6 +7,27 @@
 
   }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+
+  font-weight: inherit;
+	font-size: inherit;
+}
+
+textarea,
+button,
+input {
+	font-weight: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-family: inherit;
+}
+
 
 //   .main-title {
 //     margin-bottom: 20px;

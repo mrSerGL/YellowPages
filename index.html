@@ -83,7 +83,7 @@
 
   </section>
 
-  <section class="portfolio">
+  <section class="portfolio__facades">
     <!-- MAIN (Center website) -->
     <div class="main">
 
@@ -97,25 +97,46 @@
         <button class="btn" onclick="filterSelection('nature')"> Nature</button>
         <button class="btn" onclick="filterSelection('cars')"> Cars</button>
         <button class="btn" onclick="filterSelection('people')"> People</button>
-        <button class="btn" onclick="filterSelection('frezer')"> Frezer</button>
+        <button class="btn" onclick="filterSelection('classic')"> Класіка</button>
       </div>
 
       <!-- Portfolio Gallery Grid -->
       <div class="row">
-        <div class="column frezer">
-          <div class="content">
-            <img src="./images/portfolio/mountains.jpg" alt="Mountains" style="width:100%">
-            <h4>Mountains</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column frezer">
-          <div class="content">
-            <img src="./images/portfolio/lights.jpg" alt="Lights" style="width:100%">
-            <h4>Lights</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
+<div class="classica">
+  <div class="column classic">
+    <div class="content">
+      <img src="./images/portfolio/mdf_classica/juilett.jpg" alt="Меблевий Фасад МДФ Фрезерування Джульєтта" style="width:100%">
+      <h4>Джульєтта</h4>
+      <p>Меблевий Фасад МДФ Фрезерування</p>
+    </div>
+  </div>
+  <div class="column classic">
+    <div class="content">
+      <img src="./images/portfolio/mdf_classica/kl-03.jpg" alt="Меблевий Фасад МДФ Фрезерування KL-03" style="width:100%">
+      <h4>KL-03</h4>
+      <p>Меблевий Фасад МДФ Фрезерування</p>
+    </div>
+  </div>
+  <div class="column classic">
+    <div class="content">
+      <img src="./images/portfolio/mdf_classica/kl-02-01.jpg" alt="Меблевий Фасад МДФ Фрезерування KL-02-01" style="width:100%">
+      <h4>KL-02-01</h4>
+      <p>Меблевий Фасад МДФ Фрезерування</p>
+    </div>
+  </div>
+  <div class="column classic">
+    <div class="content">
+      <img src="./images/portfolio/mdf_classica/kl-02-02.jpg" alt="Меблевий Фасад МДФ Фрезерування KL-02-02" style="width:100%">
+      <h4>KL-02-02</h4>
+      <p>Меблевий Фасад МДФ Фрезерування</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
         <div class="column nature">
           <div class="content">
             <img src="./images/portfolio/nature.jpg" alt="Nature" style="width:100%">
@@ -183,7 +204,7 @@
 
   <!-- ==== scripts =====  -->
 
-  <!-- === portfolio script === -->
+  <!-- === portfolio facades script === -->
   <script>
     filterSelection("all")
     function filterSelection(c) {
