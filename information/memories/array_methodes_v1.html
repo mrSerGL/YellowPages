@@ -1,0 +1,147 @@
+
+<!-- 
+* Создание массива:    
+            var fruits = ['Яблоко', 'Банан'];
+
+* Доступ к элементу массива по индексу:   
+            var first = fruits[0];  // Яблоко
+
+* Итерирование по массиву: 
+            fruits.forEach(function(item, index, array) { console.log(item, index);}); 
+
+===== push
+* Добавление элемента в конец массива (push): 
+            var newLength = fruits.push('Апельсин');
+===== pop
+* Удаление последнего элемента массива:
+            var last = fruits.pop(); 
+===== shift            
+* Удаление первого элемента массива: 
+            var first = fruits.shift(); 
+===== unshift            
+* Добавление элемента в начало массива:  
+            var newLength = fruits.unshift('Клубника') 
+===== pos
+* Поиск номера элемента в массиве:    
+            fruits.push('Манго');  ||  var pos = fruits.indexOf('Банан');
+===== splice
+* Удаление элемента с определённым индексом: 
+            var removedItem = fruits.splice(pos, 1); 
+
+* Удаление нескольких элементов, начиная с определённого индекса:  
+            var pos = 1, n = 2; var removedItems = array.splice(pos, n);
+
+* Создание копии массива: 
+            var shallowCopy = fruits.slice(); 
+
+===== some()
+* чи задовольняє якийсь елемент масиву умові
+            myAwesomeArray.some(test => test === "d")
+
+===== every()
+*перевіряє, чи всі елементи масиву задовольняють умові
+           myAwesomeArray.every(test => test === "d")
+
+===== map()
+* створює новий масив з результатом виклику зазначеної функції кожного елемента масиву.
+          myAwesomeArray.map(x => x * x)
+
+===== filter()
+* Цей метод приймає функцію як параметр і повертає новий масив, що містить всі елементи масиву, для якого функція фільтрації передавалася як аргумент, і повертає її зі значенням true.
+          myAwesomeArray.filter(element => element.name === "Mass")
+
+
+===== forEach()
+* Цей метод застосовує функцію кожного елемента масиву.
+            myAwesomeArray.forEach(element => console.log(element.name))
+
+===== findIndex()
+* Цей метод приймає функцію як параметр і надалі застосовує її до масиву. Він повертає індекс знайденого елемента, якщо елемент задовольняє умові функції перевірки, переданої як аргумент. Якщо вона не задовольняє, повертається –1.
+           myAwesomeArray.findIndex(element => element.id === 3)
+
+9. find()
+
+Цей метод приймає функцію як аргумент і надалі застосовує її до масиву. Він повертає значення елемента, знайденого в масиві, якщо елемент задовольняє умову функції перевірки. В іншому випадку воно повертається зі значенням undefined.
+
+const myAwesomeArray = [
+  { id: 1, name: "john" },
+  { id: 2, name: "Ali" },
+  { id: 3, name: "Mass" },
+]
+
+myAwesomeArray.find(element => element.id === 3)
+//-------> Output : {id: 3, name: "Mass"}
+
+myAwesomeArray.find(element => element.id === 7)
+//-------> Output : undefined
+
+10. sort()
+
+Цей метод приймає функцію як параметр. Він сортує елементи масиву та повертає їх.
+
+const myAwesomeArray = [5, 4, 3, 2, 1]
+
+// Sort from smallest to largest
+myAwesomeArray.sort((a, b) => a - b)
+//-------> Output : [1, 2, 3, 4, 5]
+
+// Sort from largest to smallest
+myAwesomeArray.sort((a, b) => b - a)
+//-------> Output : [5, 4, 3, 2, 1]
+
+11. concat()
+
+Цей метод поєднує два або більше масиву/значення та повертає новий масив.
+
+const myAwesomeArray = [1, 2, 3, 4, 5]
+const myAwesomeArray2 = [10, 20, 30, 40, 50]
+myAwesomeArray.concat(myAwesomeArray2)
+//-------> Output : [1, 2, 3, 4, 5, 10, 20, 30, 40, 50]
+
+12. fill()
+
+Цей метод заповнює всі елементи масиву однаковим значенням від початкового індексу (за замовчуванням 0) до кінцевого індексу (за замовчуванням array.length).
+
+const myAwesomeArray = [1, 2, 3, 4, 5]
+
+// The first argument (0) is the value
+// The second argument (1) is the starting index
+// The third argument (3) is the ending index
+myAwesomeArray.fill(0, 1, 3)
+//-------> Output : [1, 0, 0, 4, 5]
+
+13. includes()
+
+Цей метод повертає значення true, якщо масив містить певний елемент, і значення false– якщо ні.
+
+const myAwesomeArray = [1, 2, 3, 4, 5]
+
+myAwesomeArray.includes(3)
+//-------> Output : true
+
+myAwesomeArray.includes(8)
+//-------> Output : false
+
+14. reverse()
+
+Цей метод змінює порядок прямування елементів у масиві на зворотний. Перший елемент стає останнім, а останній першим.
+
+const myAwesomeArray = ["e", "d", "c", "b", "a"]
+
+myAwesomeArray.reverse()
+//-------> Output : ['a', 'b', 'c', 'd', 'e']
+
+15. flatMap()
+
+Цей метод застосовує функцію кожного елемента масиву, а потім згладжує результат в новий масив. Він об'єднує метод flat()та метод map()в одну функцію.
+
+const myAwesomeArray = [[1], [2], [3], [4], [5]]
+
+myAwesomeArray.flatMap(arr => arr * 10)
+//-------> Output : [10, 20, 30, 40, 50]
+
+// With .flat() and .map()
+myAwesomeArray.flat().map(arr => arr * 10)
+//-------> Output : [10, 20, 30, 40, 50]            
+
+-->
