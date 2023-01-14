@@ -27,7 +27,56 @@
                      console.log(planets.includes("Mars")); // true
                      console.log(planets.includes("Venus")); // true
                      console.log(planets.includes("Jupiter")); // false 
-        </p>   
+        </p> 
+       
+* indexOf(value)
+? повертає перший індекс, в якому елемент зі значенням value був знайдений в масиві
+
+        <p>     
+       indexOf(value) повертає перший індекс, в якому елемент зі значенням value був знайдений в масиві, або число -1, якщо такий елемент відсутній.       
+       Використовуйте indexOf тоді, коли необхідно отримати сам індекс елемента.
+        
+       const clients = ["Mango", "Ajax", "Poly", "Kiwi"];
+       console.log(clients.indexOf("Poly")); // 2
+       console.log(clients.indexOf("Monkong")); // - 
+        </p>  
+        
+* join(delimiter)
+? об'єднує елементи масиву у рядок.    
+        
+        <p>
+              Метод масивів join(delimiter) об'єднує елементи масиву у рядок. У рядку елементи будуть розділені символом або групою символів, зазначених в delimiter. Тобто ця операція протилежна методу рядків split(delimiter).
+               
+              const words = ["JavaScript", "це", "цікаво"];
+              console.log(words.join("")); // "JavaScriptцецікаво"
+              console.log(words.join(" ")); // "JavaScript це цікаво"
+              console.log(words.join("-")); // "JavaScript-це-цікаво"  
+              </p>     
+
+*  pop()
+? видаляє останній елемент з кінця масиву і повертає видалений елемент.
+ 
+       <p>
+       Метод pop() видаляє останній елемент з кінця масиву і повертає видалений елемент. Якщо масив порожній, метод повертає undefined.
+
+       const numbers = [1, 2, 3, 4, 5];
+
+           console.log(numbers.pop()); //  5
+           console.log(numbers); // [1, 2, 3, 4]
+
+           console.log(numbers.pop()); //  4
+           console.log(numbers); // [1, 2, 3]
+           
+           console.log(numbers.pop()); //  3
+           console.log(numbers); // [1, 2]
+
+           console.log(numbers.pop()); //  2
+           console.log(numbers); // [1]
+
+           console.log(numbers.pop()); //  1
+           console.log(numbers); // []
+       </p>
+
 
  * push() 
  ? добавляет один или несколько элементов в конец массива
@@ -60,6 +109,99 @@
         console.log(planets.slice(-2)); // ['Jupiter', 'Saturn']
         console.log(planets.slice()); // ['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn']
         </p>  
+
+ * split(delimiter) 
+ ? перетворює рядок в масив, «розбиваючи» його роздільником delimiter.
+
+       <p>
+       Метод split(delimiter) перетворює рядок в масив, «розбиваючи» його роздільником delimiter.
+       Якщо роздільник - це порожній рядок, то створиться масив окремих символів. Роздільником може бути один або декілька символів.
+       
+       const name = "Mango";
+       console.log(name.split("")); // ["M", "a", "n", "g", "o"]
+       
+       const message = "JavaScript - це цікаво";
+       console.log(message.split(" ")); // ["JavaScript", "-", "це", "цікаво"]
+       </p>
+
+* splice() 
+
+* Видалення:  splice(position, num) 
+? Щоб видалити елементи в масиві, передаються два аргументи:
+?     - position - вказує на позицію (індекс) першого елемента для видалення
+?     - num - визначає кількість елементів, що видаляються
+
+          <p>
+              splice(position, num)
+
+            - position - вказує на позицію (індекс) першого елемента для видалення
+            - num - визначає кількість елементів, що видаляються
+
+            Метод splice змінює вихідний масив і повертає масив, що містить видалені елементи. Наприклад, у нас є масив оцінок, який містить п'ять чисел від 1 до 5.
+
+            const scores = [1, 2, 3, 4, 5];
+
+            // Видаляємо три елементи масиву, починаючи з першого елемента (індекс 0)
+            const deletedScores = scores.splice(0, 3);
+
+            // Тепер масив scores містить два елементи
+            console.log(scores); // [4, 5]
+
+            // А масив deletedScores містить три видалені елементи
+            console.log(deletedScores); // [1, 2, 3]
+          </p>
+
+* Додавання: splice(position, 0, new_element_1, new_element_2, ...)
+? щоб додати один або декілька елементів в масив, необхідно передати три або більше аргументи
+          
+           <p>
+           Для того, щоб додати один або декілька елементів в масив, необхідно передати три або більше аргументи, за такої умови, другий аргумент повинен дорівнювати нулю.
+
+           splice(position, 0, new_element_1, new_element_2, ...)
+
+           Аргумент position вказує початкову позицію в масиві, куди будуть вставлені нові елементи.
+           Другий аргумент - це нуль, він говорить методу не видаляти елементи в місці додавання нових.
+           Третій, четвертий і всі наступні аргументи - це нові елементи, які додаються в масив.
+           Наприклад, у нас є масив з назвами кольорів у вигляді рядків. Додамо новий колір перед елементом з індексом 2.
+
+           const colors = ["red", "green", "blue"];
+
+           colors.splice(2, 0, "purple");
+           console.log(colors); // ["red", "green", "purple", "blue"]
+
+           Можна додати довільну кількість елементів, передавши четвертий, п'ятий аргумент тощо.
+
+           const colors = ["red", "green", "blue"];
+
+           colors.splice(1, 0, "yellow", "pink");
+           console.log(colors); // ["red", "yellow", "pink", "green", "blue"]
+           </p>
+
+* Заміна:  splice(position, num, new_element_1, new_element_2, ...)
+? Заміна - це операція додавання, в якій видаляються елементи в місці додавання нових.
+
+           <p>
+              Заміна - це операція додавання, в якій видаляються елементи в місці додавання нових. Для цього необхідно передати мінімум три аргументи. Кількість елементів, що видаляються і додаються, може не збігатися.
+           
+              splice(position, num, new_element_1, new_element_2, ...)
+              
+              position - вказує на позицію (індекс) першого елемента для видалення
+              num - визначає кількість елементів, що видаляються
+              Третій, четвертий і всі наступні аргументи - це нові елементи, які додаються в масив.
+              Наприклад, у нас є масив мов програмування з чотирьох елементів.
+              
+              const languages = ["C", "C++", "Java", "JavaScript"];
+              
+              // Заміняємо елемент з індексом 1 на новий
+              languages.splice(1, 1, "Python");
+              console.log(languages); // ["C", "Python", "Java", "JavaScript"]
+              
+              // Заміняємо один елемент (з індексом 2) на декілька
+              languages.splice(2, 1, "C#", "Swift", "Go");
+              console.log(languages); // ["C", "Python", "C#", "Swift", "Go", "JavaScript"]  
+           </p>         
+
+
 
   
 
