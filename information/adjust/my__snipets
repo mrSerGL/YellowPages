@@ -1,46 +1,66 @@
-	{ 
-		"Print to console": {
-			"scope": "javascript,typescript",
-			"prefix": "cl",
-			"body": ["console.log($1);", "$2"],
-			"description": "Log output to console"
-		  },
-		
-		  "OutLine": {
-			"prefix": "otl",
-			"body": ["outline: 1px solid red;", "outline-offset: -2 px;"],
-			"description": "add outline"
-		  },
-		
-		  "Include svg tag": {
-			"prefix": "svg",
-			"body": [
-			  "<svg class=\"${1}\" width=\"${2}\" height=\"${3}\">",
-			  "  <use href=\"${4}\"></use>",
-			  "</svg>"
-			],
-			"description": "Add svg tag for html"
-		  },
-		
-		  "For cycle": {
-			"prefix": "fr",
-			"body": [
-			  "for (let i = 0; i < ${1}.length; i += 1) {",
-			  "$2;",
-			  "}"
-			],
-			"description": "For cycle"
-		  },
-		
-		  "ForOf cycle": {
-			"prefix": "forof",
-			"body": [
-			  "for (const ${1}var of ${2}obj) {",
-			  "${3};",
-			  "}"
-			],
-			"description": "ForOf cycle"
-		  }
-		}
-		
-		
+"Print to console": {
+    "scope": "javascript,typescript",
+    "prefix": "cl",
+    "body": ["console.log($1);", "$2"],
+    "description": "Log output to console"
+  },
+
+  "OutLine": {
+    "prefix": "otl",
+    "body": ["outline: 1px solid red;", "outline-offset: -2 px;"],
+    "description": "add outline"
+  },
+
+  "Include svg tag": {
+    "prefix": "svg",
+    "body": [
+      "<svg class=\"${1}\" width=\"${2}\" height=\"${3}\">",
+      "  <use href=\"${4}\"></use>",
+      "</svg>"
+    ],
+    "description": "Add svg tag for html"
+  },
+
+  "For cycle": {
+    "prefix": "fr",
+    "body": [
+      "for (let i = 0; i < ${1}.length; i += 1) {",
+      "$2;",
+      "}"
+    ],
+    "description": "For cycle"
+  },
+
+  "ForOf cycle": {
+    "prefix": "forof",
+    "body": [
+      "for (const ${1}var of ${2}obj) {",
+      "${3};",
+      "}"
+    ],
+    "description": "ForOf cycle"
+  },
+
+  "forEach cycle": {
+    "prefix": "foreach",
+    "body": [
+     " ${1}массив.forEach(function callback(element, index, array) {",
+     "// Тіло колбек-функції",
+     " });"
+    ],
+    "description": "ForOf cycle"
+  },
+
+  "reduce": {
+    "prefix": "reduce",
+    "body": [
+      "const result = ${1}массив.reduce((acc, item, index, array) => {",
+      " return acc",  
+      "  // Тело коллбек-функции",
+      " }, 0);"
+    ],
+    "description": "reduce"
+  }
+
+}
+
