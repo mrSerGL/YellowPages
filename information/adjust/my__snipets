@@ -55,8 +55,8 @@
     "prefix": "reduce",
     "body": [
       "const result = ${1}массив.reduce((acc, item, index, array) => {",
-      " return acc",  
       "  // Тело коллбек-функции",
+      " return acc",  
       " }, 0);"
     ],
     "description": "reduce"
